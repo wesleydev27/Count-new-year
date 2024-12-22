@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #FFD700;
+    overflow: hidden;
+}
+
+.countdown-container {
+    text-align: center;
+    /*background: rgba(128, 73, 2, 0.151);*/
+    padding: 2rem;
+    border-radius: 15px;
+    /*box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);*/
+    animation: float 3s ease-in-out infinite;
+    position: relative;
+}
+
+/*@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+} */
+
+.title {
+    font-size: 9rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6);
+    }
+}
+
+.countdown {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.time-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: appear 1s ease-out;
+}
+
+.celebration {
+    display: none;
+    /* Inicialmente oculto */
+    font-size: 5rem;
+    font-weight: bold;
+    animation: celebration 2s infinite;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+@keyframes celebration {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.time {
+    font-size: 15rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.time-segment:hover .time {
+    transform: scale(1.1);
+}
+
+.label {
+    font-size: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
