@@ -7,7 +7,8 @@ function updateCountdown() {
         // Chegou 2025!
         document.getElementById('countdown').style.display = 'none';
         document.getElementById('celebration').style.display = 'block';
-        document.querySelector('.title').textContent = 'FELIZ 2025!';
+        document.querySelector('.title').textContent = '';
+        document.querySelector('.title2').textContent = '';
         // Aumentar a frequência das partículas para a celebração
         createParticles(50); // Mais partículas para celebração
         return;
